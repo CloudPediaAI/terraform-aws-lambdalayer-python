@@ -19,10 +19,10 @@ variable "layer_name" {
 
 variable "python_runtime" {
   type        = string
-  description = "Runtime version of Python, eg. python3.12, python3.11, python3.10, python3.9, python3.8"
-  default     = "python3.12"
+  description = "Runtime version of Python, eg. python3.13, python3.12, python3.11, python3.10, python3.9, python3.8"
+  default     = "python3.13"
   validation {
-    condition     = contains(["python3.12", "python3.11", "python3.10", "python3.9", "python3.8", null], var.python_runtime)
+    condition     = contains(["python3.13", "python3.12", "python3.11", "python3.10", "python3.9", "python3.8", null], var.python_runtime)
     error_message = "Unsupported runtime <${var.python_runtime}>"
   }
 }
