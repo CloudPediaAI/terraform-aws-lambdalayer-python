@@ -1,5 +1,5 @@
 locals {
-  python_runtimes   = ["python3.12", "python3.11", "python3.10", "python3.9", "python3.8"]
+  python_runtimes   = ["python3.13", "python3.12", "python3.11", "python3.10", "python3.9"]
   lambda_layer_name = (var.layer_name == "null") ? "lib-python-${var.library_name}" : var.layer_name
   lambda_runtime    = contains(local.python_runtimes, var.python_runtime) ? var.python_runtime : local.python_runtimes[0]
 }
